@@ -20,3 +20,16 @@
         </div>
     </body>
 </html>
+
+<script>
+    function runTrain(){
+        clearInterval(intervalId)
+        
+        let timeFrom = document.getElementById('time_from').value
+        let timeTo = document.getElementById('time_to').value
+        alert('a')
+        var intervalId = window.setInterval(function(){
+            document.getElementById('progress').value = (timeTo - new Date().getTime()) / (timeTo - timeFrom)
+        }, 1000);
+    }
+</script>
